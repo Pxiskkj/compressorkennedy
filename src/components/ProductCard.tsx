@@ -15,7 +15,7 @@ export function ProductCard() {
         <div className="flex items-baseline gap-2 flex-wrap">
           <span className="text-brand-red text-2xl font-bold leading-none">R$47,74</span>
           <span className="text-muted-foreground line-through text-sm">R$149,21</span>
-          <span className="text-[10px] font-semibold text-brand-red bg-red-50 px-1.5 py-0.5 rounded">
+          <span className="text-[10px] font-semibold text-brand-red bg-brand-red/10 px-1.5 py-0.5 rounded">
             -68%
           </span>
         </div>
