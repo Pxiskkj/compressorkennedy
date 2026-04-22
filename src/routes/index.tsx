@@ -5,7 +5,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { ProductDescription } from "@/components/ProductDescription";
 import { ProductReviews } from "@/components/ProductReviews";
 import { ProductFAQ } from "@/components/ProductFAQ";
-import { ArrowDownNarrowWide } from "lucide-react";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,11 +31,6 @@ function Index() {
     <div className="min-h-screen bg-background flex flex-col max-w-md mx-auto shadow-xl">
       <SiteHeader />
       <main className="pt-6 pb-4">
-        <div className="px-5 flex items-center justify-between mb-4">
-          <button aria-label="Ordenar" className="text-foreground/70">
-            <ArrowDownNarrowWide className="h-5 w-5" />
-          </button>
-        </div>
         <h1 className="text-center text-2xl font-light text-foreground/70 mb-6">
           Compressores de Ar
         </h1>
@@ -45,6 +40,7 @@ function Index() {
         <ProductFAQ />
       </main>
       <SiteFooter />
+      <WhatsAppFloat />
     </div>
   );
 }
