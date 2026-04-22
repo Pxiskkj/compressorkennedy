@@ -2,7 +2,6 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 import { CartProvider } from "@/context/CartContext";
 import { CartDrawer } from "@/components/CartDrawer";
 import { MenuDrawer } from "@/components/MenuDrawer";
-
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
