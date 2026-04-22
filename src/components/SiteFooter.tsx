@@ -44,24 +44,16 @@ export function SiteFooter() {
         ))}
       </div>
 
-      <div className="px-5 py-8 border-t border-white/15">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="h-12 w-12 rounded-full bg-white text-brand-blue font-black flex items-center justify-center text-xl">
-            CK
-          </div>
-          <div className="font-black leading-tight">
-            <div>COMPRESSORES</div>
-            <div>KENNEDY</div>
-          </div>
-        </div>
-        <p className="text-sm text-white/90 leading-relaxed">
-          A Compressores Kennedy se consagra no mercado de compressores de ar, máquinas e
-          equipamentos para diversos segmentos, desde 1995. Atualmente, ampliamos ainda mais
-          nossas atividades trabalhando com um nicho completo de produtos que atendem desde
-          profissionais até o uso particular.
+      <div className="px-5 py-8 border-t border-white/15 text-center space-y-4">
+        <p className="text-sm text-white leading-relaxed">
+          © {new Date().getFullYear()} Compressores Kennedy │ CNPJ 08.858.579/0015-35 │ Matriz: Rod
+          Contorno Sul de Garuva Sidney Pensky Palmital - Garuva Nº 8661 - SC CEP: 89.248-000
         </p>
-        <p className="text-xs text-white/70 mt-6 text-center">
-          © {new Date().getFullYear()} Compressores Kennedy. Todos os direitos reservados.
+        <p className="text-sm text-white/90 leading-relaxed">
+          Todos os preços e condições deste site são válidos apenas para compras no site. Os preços
+          previstos no site prevalecem aos demais anunciados em outros meios de comunicação e sites
+          de buscas. Em caso de divergência, o preço válido é o do carrinho de compras deste site.
+          Imagens ilustrativas. Confira condições na sacola de compras.
         </p>
       </div>
     </footer>
