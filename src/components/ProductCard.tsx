@@ -58,8 +58,8 @@ export function ProductCard() {
         </div>
       </div>
 
-      {/* Cor */}
-      <div className="mt-3 flex items-center gap-2">
+      {/* Cor + miniatura */}
+      <div className="mt-3 flex flex-col items-start gap-1.5">
         <span className="text-[10px] text-foreground/70">cor: preto</span>
         <div className="h-8 w-8 rounded border-2 border-brand-blue overflow-hidden bg-white">
           <img src={img1} alt="preto" className="w-full h-full object-contain" />
@@ -94,13 +94,6 @@ export function ProductCard() {
             <span className="text-[10px] font-semibold text-brand-blue mt-0.5">Curtido</span>
           )}
         </button>
-      </div>
-
-      {/* Frete grátis */}
-      <div className="mt-4 text-center">
-        <span className="inline-block bg-brand-green/10 text-brand-green font-bold text-sm px-4 py-2 rounded-full">
-          🚚 FRETE GRÁTIS
-        </span>
       </div>
 
       {/* Botão Comprar */}
