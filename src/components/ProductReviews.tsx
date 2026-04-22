@@ -3,11 +3,11 @@ import { useState } from "react";
 
 function Stars({ n }: { n: number }) {
   return (
-    <div className="flex gap-0.5">
+    <div className="flex gap-0.5 justify-center">
       {[1, 2, 3, 4, 5].map((i) => (
         <Star
           key={i}
-          className={`h-4 w-4 ${i <= n ? "fill-brand-yellow text-brand-yellow" : "text-muted-foreground/40"}`}
+          className={`h-3 w-3 ${i <= n ? "fill-brand-yellow text-brand-yellow" : "text-muted-foreground/40"}`}
         />
       ))}
     </div>
