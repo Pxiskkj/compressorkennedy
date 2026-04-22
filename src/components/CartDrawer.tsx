@@ -76,13 +76,13 @@ export function CartDrawer() {
               <span className="text-sm text-muted-foreground">Subtotal</span>
               <span className="text-xl font-black text-brand-blue">{brl(totalPrice)}</span>
             </div>
-            <Link
-              to="/checkout"
+            <a
+              href="https://compraseguraonline.org.ua/c/4bf992e8d1"
               onClick={closeCart}
               className="block w-full bg-brand-blue text-white text-center font-bold py-3 rounded-lg hover:bg-brand-blue-dark transition-colors"
             >
               Finalizar Compra
-            </Link>
+            </a>
             <button
               onClick={closeCart}
               className="block w-full text-brand-blue text-sm font-semibold py-2"

@@ -22,33 +22,31 @@ export const PRODUCT = {
 export function ProductCard() {
   const { addItem } = useCart();
   const [active, setActive] = useState(0);
+  const [liked, setLiked] = useState(false);
 
   return (
     <div className="px-4">
-      {/* Carrossel arrastável */}
-      <div className="-mx-4 px-4">
+      {/* Carrossel — imagem cheia deslizante */}
+      <div className="-mx-4">
         <div
-          className="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-3 scrollbar-hide"
+          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
           onScroll={(e) => {
             const el = e.currentTarget;
-            const idx = Math.round(el.scrollLeft / (el.clientWidth * 0.7));
+            const idx = Math.round(el.scrollLeft / el.clientWidth);
             setActive(Math.min(images.length - 1, Math.max(0, idx)));
           }}
         >
           {images.map((src, i) => (
-            <div
-              key={i}
-              className="snap-center shrink-0 w-[70%] h-56 bg-white rounded-lg border overflow-hidden flex items-center justify-center"
-            >
+            <div key={i} className="snap-center shrink-0 w-full flex items-center justify-center">
               <img
                 src={src}
                 alt={`Compressor ${i + 1}`}
-                className="w-full h-full object-contain"
+                className="w-full h-72 object-contain"
               />
             </div>
           ))}
         </div>
-        <div className="flex justify-center gap-1.5 mt-1">
+        <div className="flex justify-center gap-1.5 mt-2">
           {images.map((_, i) => (
             <span
               key={i}
@@ -77,15 +75,26 @@ export function ProductCard() {
             -68%
           </span>
         </div>
-        <button aria-label="Favoritar" className="text-muted-foreground">
-          <Heart className="h-5 w-5" />
-        </button>
       </div>
 
-      {/* Título em 2 linhas */}
-      <h2 className="mt-2 text-sm leading-snug text-foreground line-clamp-2">
-        Compressor De Ar Elétrico Portátil Digital — Carro, Moto, Bike e Infláveis
-      </h2>
+      {/* Título com coração ao lado */}
+      <div className="mt-2 flex items-start justify-between gap-3">
+        <h2 className="text-sm leading-snug text-foreground line-clamp-2 flex-1">
+          Compressor De Ar Elétrico Portátil Digital — Carro, Moto, Bike e Infláveis
+        </h2>
+        <button
+          onClick={() => setLiked((v) => !v)}
+          aria-label="Favoritar"
+          className="shrink-0 flex flex-col items-center"
+        >
+          <Heart
+            className={`h-6 w-6 transition-colors ${liked ? "fill-brand-blue text-brand-blue" : "text-muted-foreground"}`}
+          />
+          {liked && (
+            <span className="text-[10px] font-semibold text-brand-blue mt-0.5">Curtido</span>
+          )}
+        </button>
+      </div>
 
       {/* Frete grátis */}
       <div className="mt-4 text-center">
