@@ -2,6 +2,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 import { CartProvider } from "@/context/CartContext";
 import { CartDrawer } from "@/components/CartDrawer";
 import { MenuDrawer } from "@/components/MenuDrawer";
+
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -32,13 +33,17 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { name: "description", content: "Compressor Central is a website showcasing air compressors with product details, pricing, and customer reviews." },
       { name: "author", content: "Lovable" },
       { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:description", content: "Compressor Central is a website showcasing air compressors with product details, pricing, and customer reviews." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Lovable App" },
+      { name: "twitter:description", content: "Compressor Central is a website showcasing air compressors with product details, pricing, and customer reviews." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4d9e553e-bb18-4893-b1df-48d9437487c8/id-preview-af79c5c3--7749594e-4efb-427e-9b36-daffd9b05721.lovable.app-1776836479417.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4d9e553e-bb18-4893-b1df-48d9437487c8/id-preview-af79c5c3--7749594e-4efb-427e-9b36-daffd9b05721.lovable.app-1776836479417.png" },
     ],
     links: [
       {
