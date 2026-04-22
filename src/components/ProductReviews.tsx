@@ -47,7 +47,7 @@ export function ProductReviews() {
       <div className="flex items-center justify-center gap-2 mt-3">
         <span className="text-3xl font-black leading-none">4.9</span>
         <Stars n={5} />
-        <span className="text-muted-foreground text-xs">(378)</span>
+        <span className="text-muted-foreground text-xs">(2.724)</span>
       </div>
 
       <div className="mt-4 space-y-1.5 max-w-xs mx-auto">
