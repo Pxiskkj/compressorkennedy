@@ -42,47 +42,45 @@ export function ProductReviews() {
   const visible = expanded ? reviews : reviews.slice(0, 3);
 
   return (
-    <section className="px-5 mt-10">
-      <h3 className="text-lg font-black tracking-wide text-foreground">AVALIAÇÕES</h3>
-      <div className="flex items-center gap-3 mt-3">
-        <span className="text-4xl font-black">4.9</span>
+    <section className="px-5 mt-10 text-center">
+      <h3 className="text-base font-black tracking-wide text-foreground">AVALIAÇÕES</h3>
+      <div className="flex items-center justify-center gap-2 mt-3">
+        <span className="text-3xl font-black leading-none">4.9</span>
         <Stars n={5} />
-        <span className="text-muted-foreground text-sm">(378)</span>
+        <span className="text-muted-foreground text-xs">(378)</span>
       </div>
 
-      <div className="mt-4 space-y-2">
+      <div className="mt-4 space-y-1.5 max-w-xs mx-auto">
         {dist.map((d) => (
-          <div key={d.stars} className="flex items-center gap-3 text-xs">
-            <span className="w-6 font-medium">{d.stars}★</span>
-            <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
+          <div key={d.stars} className="flex items-center gap-2 text-[11px]">
+            <span className="w-5 font-medium text-left">{d.stars}★</span>
+            <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
               <div className="h-full bg-brand-yellow" style={{ width: `${d.pct}%` }} />
             </div>
-            <span className="w-12 text-right text-muted-foreground">{d.pct}%</span>
+            <span className="w-10 text-right text-muted-foreground">{d.pct}%</span>
           </div>
         ))}
       </div>
 
-      <div className="mt-6 space-y-3">
+      <div className="mt-6 space-y-3 text-center">
         {visible.map((r) => (
-          <div key={r.name + r.date} className="bg-muted/50 rounded-xl p-4">
-            <div className="flex items-center justify-between mb-1">
-              <div className="flex items-center gap-2">
-                <span className="font-bold text-sm">{r.name}</span>
-                <span className="flex items-center gap-1 text-brand-green text-xs font-medium">
-                  <CheckCircle2 className="h-3.5 w-3.5" /> Verificado
-                </span>
-              </div>
-              <span className="text-xs text-muted-foreground">{r.date}</span>
+          <div key={r.name + r.date} className="bg-muted/50 rounded-xl p-3">
+            <div className="flex items-center justify-center gap-2 flex-wrap mb-1">
+              <span className="font-bold text-xs">{r.name}</span>
+              <span className="inline-flex items-center gap-1 text-brand-green text-[10px] font-medium">
+                <CheckCircle2 className="h-3 w-3" /> Verificado
+              </span>
+              <span className="text-[10px] text-muted-foreground">{r.date}</span>
             </div>
             <Stars n={r.rating} />
-            <p className="text-sm text-foreground/85 mt-2 leading-relaxed">{r.text}</p>
+            <p className="text-xs text-foreground/85 mt-2 leading-relaxed">{r.text}</p>
           </div>
         ))}
       </div>
 
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full text-center mt-5 text-brand-blue font-bold flex items-center justify-center gap-1"
+        className="w-full text-center mt-5 text-brand-blue font-bold text-sm flex items-center justify-center gap-1"
       >
         {expanded ? "Ver menos avaliações" : "Ver mais avaliações"}
         {expanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
