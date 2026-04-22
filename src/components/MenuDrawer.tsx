@@ -18,11 +18,8 @@ export function MenuDrawer() {
     <Sheet open={isMenuOpen} onOpenChange={(o) => !o && closeMenu()}>
       <SheetContent side="left" className="w-[85%] sm:max-w-sm p-0">
         <SheetHeader className="bg-brand-blue text-white px-5 py-6">
-          <SheetTitle className="text-white flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full bg-white text-brand-blue font-black flex items-center justify-center">
-              CK
-            </div>
-            <span className="font-black">COMPRESSORES KENNEDY</span>
+          <SheetTitle className="text-white font-black text-center">
+            COMPRESSORES KENNEDY
           </SheetTitle>
         </SheetHeader>
         <nav className="py-2">
